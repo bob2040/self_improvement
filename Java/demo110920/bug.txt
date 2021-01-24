@@ -1,0 +1,9 @@
+An exception occurs in the add method.
+The name of the exception:NullPointerException
+The reason for the exception:null
+-----------------------------------------
+An exception occurs in the div method.
+The name of the exception:ArithmeticException
+The reason for the exception:/ by zero
+-----------------------------------------
+There were a total of 2 exceptions in this test.
