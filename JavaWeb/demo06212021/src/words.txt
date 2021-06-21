@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 bad
 ill
 sad
 awful
 poor
+=======
+bad
+ill
+sad
+awful
+poor
+>>>>>>> 2ff42183102ce4aec61a17b46803747e5e656721
