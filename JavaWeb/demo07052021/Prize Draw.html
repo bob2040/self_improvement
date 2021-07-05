@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prize Draw</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    <script language='javascript' type='text/javascript'>
+
+        $(function () {
+            $("#startID").prop("disabled",false);
+            $("#stopID").prop("disabled",true);
+
+            var imgs = [
+                "../img/man0.jpg",
+                "../img/man1.jpg",
+                "../img/man2.jpg",
+                "../img/man3.jpg",
+                "../img/man4.jpg",
+                "../img/man5.jpg",
+                "../img/man6.jpg",
+                "../img/man7.jpg",
+                "../img/man8.jpg",
+                "../img/man9.jpg"
+            ];
+            var index;
+            var interval;
+            $("#startID").click(function () {
+                $("#startID").prop("disabled",true);
+                $("#stopID").prop("disabled",false);
+                interval = setInterval(function () {
+                    index = Math.floor(Math.random() * 10);
+                    $("#img1ID").prop("src",imgs[index]);
+                },20);
+            });
+
+            $("#stopID").click(function () {
+                $("#startID").prop("disabled",false);
+                $("#stopID").prop("disabled",true);
+
+                clearInterval(interval);
+
+                $("#img2ID").prop("src",imgs[index]).hide();
+                $("#img2ID").show(1000,function () {
+                    $("#img1ID").prop("style","width:80px;height:50px");
+                    $("#imgs").append($("#img1ID").clone());
+                    $("#img1ID").prop("style","width:160px;height:100px");
+                });
+
+                /*setTimeout(function(){
+                    $("#img1ID").prop("style","width:80px;height:50px");
+                    $("#imgs").append($("#img1ID").clone());
+                    $("#img1ID").prop("style","width:160px;height:100px");
+                },1000);*/
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+
+<div style="border-style:dotted;width:160px;height:100px">
+    <img id="img1ID" src="../img/man0.jpg" style="width:160px;height:100px"/>
+</div>
+
+
+<div style="border-style:double;width:480px;height:300px;position:absolute;left:500px;top:10px">
+    <img id="img2ID" src="../img/man0.jpg" width="480px" height="300px"/>
+</div>
+
+<input
+        id="startID"
+        type="button"
+        value="Run"
+        style="width:150px;height:150px;font-size:22px"
+        onclick="imgStart()">
+
+<input
+        id="stopID"
+        type="button"
+        value="Stop"
+        style="width:150px;height:150px;font-size:22px"
+        onclick="imgStop()">
+<br><br><br><br>
+<hr>
+<div id="imgs">
+    <h3>Results:</h3>
+
+</div>
+<hr>
+
+</body>
+</html>
