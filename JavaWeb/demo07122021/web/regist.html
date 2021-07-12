@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script>
+
+    $(function () {
+        $("#username").blur(function () {
+            var username = $(this).val();
+            $.get("findUserServlet",{username:username},function (data) {
+                if(data.userExist){
+                    $("#s_username").css("color","red");
+                    $("#s_username").html(data.msg);
+                }else {
+                    $("#s_username").css("color","green");
+                    $("#s_username").html(data.msg);
+                }
+            });
+        });
+    });
+
+</script>
+<body>
+
+    <form>
+
+        <input type="text" id="username" name="username" placeholder="Please input your username.">
+        <span id="s_username"></span>
+        <br>
+        <input type="password" name="password" placeholder="Please input your password."><br>
+        <input type="submit" value="Sign up">
+
+    </form>
+
+
+</body>
+</html>
