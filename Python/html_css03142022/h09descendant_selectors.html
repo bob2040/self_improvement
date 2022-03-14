@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendant selectors</title>
+
+    <style>
+        /* descendant selectors */
+        div p{
+            color: red;
+        }
+        .con{
+            width: 300px;
+            height: 80px;
+            background: green;
+        }
+        .con span{
+            color: red;
+        }
+        .con .pink{
+            color: pink;
+        }
+        .con .gold{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>hello</p>
+    </div>
+    <div class="con">
+        <span>hahaha</span>
+        <a href="#" class="pink">Baidu</a>
+        <a href="#" class="gold">Google</a>
+    </div>
+    <span>Hello</span>
+    <a href="#" class="pink">Sohu</a>
+</body>
+</html>

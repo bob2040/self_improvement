@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tags</title>
+</head>
+<body>
+    <!-- form tags -->
+    <form action="http://www.baidu.com" method="post">
+        <p>
+            <label>Username:</label>
+            <input type="text" name="username" value="">
+
+            <label>password:</label>
+            <input type="password" name="passwd">
+        </p>
+        <p>
+            <label>gender:</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+        </p>
+        <p>
+            <label>Hobby</label>
+            <input type="checkbox" name="hobby" value="football">Football
+            <input type="checkbox" name="hobby" value="basketball">Basketball
+            <input type="checkbox" name="hobby" value="volleyball">Volleyball
+        </p>
+        <p>
+            <label>Address:</label>
+            <select name="address">
+                <option value="Beijing">Beijing</option>
+                <option value="Shanghai">Shanghai</option>
+                <option value="Guangzhou">Guangzhou</option>
+                <option value="Shenzhen">Shenzhen</option>
+            </select>
+        </p>
+        <p>
+            <label>Photo:</label>
+            <input type="file" name="photo">
+        </p>
+        <p>
+            <label>Info:</label>
+            <textarea name="info"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" value="General_Button" onclick="alert('Hello world!')">
+        </p>
+    </form>
+</body>
+</html>

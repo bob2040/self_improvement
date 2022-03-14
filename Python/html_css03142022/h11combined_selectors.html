@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combined selectors</title>
+
+    <style>
+        /* class selectors */
+        .box1{
+            color: red;
+        }
+        .box2{
+            color: green;
+        }
+        .box3{
+            color: blue;
+        }
+        
+        /* combined selectors */
+        /* .box1,.box2,.box3{
+            width: 100px;
+            height: 100px;
+            background: black;
+        } */
+        
+        /* combined selectors as well */
+        div,p{
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">tag div 1</div>
+    <hr>
+    <div class="box2">tag div 2</div>
+    <hr>
+    <div class="box3">tag div 3</div>
+    <hr>
+    <p class="box1">this is a paragraph tag</p>
+</body>
+</html>
