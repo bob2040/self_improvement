@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing styles through a button</title>
+
+    <style>
+        .case1{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .case2{
+            width: 150px;
+            height: 100px;
+            background: green;
+        }
+        .case3{
+            width: 200px;
+            height: 100px;
+            background: blue;
+        }
+        .bt{
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+
+    <script>
+        function changeStyle(){
+            var oDiv = document.getElementById('mydiv');
+            
+            var index = Math.round(Math.random() * 2);
+            
+            if(index == 0){
+                oDiv.className = 'case1';
+            }else if(index == 1){
+                oDiv.className = 'case2';
+            }else{
+                oDiv.className = 'case3';
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="case1" id="mydiv">AAAAA</div>
+    <hr>
+    <input type="button" class="bt" value="change it!" onclick="changeStyle();">
+</body>
+</html>
