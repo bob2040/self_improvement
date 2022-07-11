@@ -1,3 +1,1 @@
-Java
-JavaWeb
-Python
+Java,JavaWeb and Python Study
